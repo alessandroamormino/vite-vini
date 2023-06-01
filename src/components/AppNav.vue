@@ -16,17 +16,17 @@ export default {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <router-link :to="{name: 'home'}" class="nav-link">Home</router-link>
         </li>
         <li class="nav-item">
           <!-- <a class="nav-link" href="#">Vini</a> -->
           <router-link :to="{name: 'wines'}" class="nav-link">Vini</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Vitigni</a>
+          <router-link :to="{name: 'wineries'}" class="nav-link">Cantine</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cantine</a>
+          <a class="nav-link" href="#">Vitigni</a>
         </li>
       </ul>
       <!-- <form class="d-flex" role="search">

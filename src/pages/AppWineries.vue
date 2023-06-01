@@ -1,34 +1,34 @@
 <script>
 import axios from 'axios';
-import WinesCard from '../components/WinesCard.vue';
+import WineriesCard from '../components/WineriesCard.vue';
 export default {
-    name: "AppWines",
+    name: "AppWineries",
     data() {
         return {
-            URL: "http://127.0.0.1:8000/api/wines",
-            wines: [],
+            URL: "http://127.0.0.1:8000/api/wineries",
+            wineries: [],
         };
     },
     methods: {
-        getWines() {
+        getWineries() {
             axios.get(this.URL).then(response => {
                 console.log(response.data.results);
-                this.wines = response.data.results;
+                this.wineries = response.data.results;
             });
         }
     },
     mounted() {
-        this.getWines();
+        this.getWineries();
     },
-    components: { WinesCard }
+    components: { WineriesCard }
 }
 </script>
 
 <template>
   <div class="container">
-    <h1>Vini</h1>
+    <h1>Cantine</h1>
     <div class="d-flex flex-wrap justify-content-center gap-4">
-      <WinesCard v-for="wine in this.wines" :wine="wine"></WinesCard>
+      <WineriesCard v-for="winery in this.wineries" :winery="winery"></WineriesCard>
     </div>
   </div>
 </template>
