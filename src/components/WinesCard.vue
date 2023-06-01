@@ -23,6 +23,7 @@ export default {
       <p>Gradazione: {{ wine.gradation }}%</p>
       <p>Estratto: {{ wine.extract }}g/l</p>
       <p>Acidità: {{ wine.acidity }}g/l</p>
+      <router-link :to="{name: 'wines.show', params:{id: wine.id}}" class="btn btn-primary">Dettaglio</router-link>
   </div>
 </div>
 </template>

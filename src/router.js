@@ -3,6 +3,7 @@ import {createRouter, createWebHistory} from 'vue-router';
 // importo i componenti
 import AppHome from './pages/AppHome.vue';
 import AppWines from './pages/AppWines.vue';
+import SingleWine from './pages/SingleWine.vue';
 
 // definisco il router
 const router = createRouter({
@@ -19,6 +20,11 @@ const router = createRouter({
       path: '/wines',
       name: 'wines',
       component: AppWines,
+    },
+    {
+      path: '/wines/:id',
+      name: 'wines.show',
+      component: SingleWine,
     }
   ],
 });
