@@ -12,7 +12,7 @@ export default {
     methods: {
         getWineries() {
             axios.get(this.URL).then(response => {
-                console.log(response.data.results);
+                // console.log(response.data.results);
                 this.wineries = response.data.results;
             });
         }

@@ -10,7 +10,7 @@ export default{
   methods: {
     getWines() {
         axios.get(this.URL + '/' + this.$route.params.id).then(response => {
-            console.log(response.data.wine);
+            // console.log(response.data.wine);
             this.wine = response.data.wine;
         });
     }
