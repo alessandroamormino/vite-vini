@@ -24,10 +24,25 @@ export default {
       <p>Nazione: {{ winery.nation }}</p>
       <p>Telefono: {{ winery.phone_number }}</p>
       <p>Email: {{ winery.mail }}</p>
-      <router-link :to="{name: 'wineries.show', params:{id: winery.id}}" class="btn btn-primary">Dettaglio</router-link>
+      <div class="button">
+        <router-link :to="{name: 'wineries.show', params:{id: winery.id}}" class="btn btn-secondary">Dettaglio</router-link>
+      </div>
   </div>
 </div>
 </template>
 
 <style lang="scss">
+.button{
+  display: flex; 
+  justify-content: center;
+}
+
+.card{
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    transform: scale(1.04);
+    box-shadow: 4px 4px 10px #00000020;
+  }
+}
 </style>

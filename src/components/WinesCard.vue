@@ -60,4 +60,13 @@ export default {
     font-size: .9em;
   }
 }
+
+.card{
+  transition: all .3s ease-in-out;
+
+  &:hover{
+    transform: scale(1.04);
+    box-shadow: 4px 4px 10px #00000020;
+  }
+}
 </style>
