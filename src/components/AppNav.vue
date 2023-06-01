@@ -26,7 +26,7 @@ export default {
           <router-link :to="{name: 'wineries'}" class="nav-link">Cantine</router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Vitigni</a>
+          <router-link :to="{name: 'vineyards'}" class="nav-link">Vitigni</router-link>
         </li>
       </ul>
       <!-- <form class="d-flex" role="search">
